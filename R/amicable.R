@@ -14,7 +14,8 @@
 
 amicable <- function(x,y) { # no defaults since the user should input two distinct numbers
   if (x == y | x < 1 | y < 1 | x%%1 != 0 | y%%1 != 0) stop ("x and y must be distinct positive integers")
-  factors_x <- (1:x)[x %% (1:x) == 0]
-  factors_y <- (1:y)[y %% (1:y) == 0]
+  factors_x <- head((1:x)[x %% (1:x) == 0],-1) ## remove number itself from proper divisors
+  factors_y <- head((1:y)[y %% (1:y) == 0],-1)
   sum(factors_x) == y & sum(factors_y) == x
 }
+
