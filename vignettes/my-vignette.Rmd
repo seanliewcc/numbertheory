@@ -1,0 +1,26 @@
+---
+title: "Vignette for Amicable"
+author: "Sean Liew"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+To use the function `amicable` from the _numbertheory_ package, input two distinct positive integers. The function returns TRUE if the sums of the numbers' proper factors are equal. For example, the the sum of proper factors for 6 is 1+2+3+6=12, while the sum of proper factors for 10 is 1+2+5+10=18, so the amicable function returns FALSE for the pair (6,10). The smallest pair of amicable numbers are 220 and 284. 
+
+```{r echo = TRUE}
+library(numbertheory)
+amicable(6,10)
+amicable(220,284)
+```
+

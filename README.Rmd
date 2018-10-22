@@ -1,0 +1,34 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# numbertheory
+
+The goal of numbertheory is to provide useful number theoretic functions. 
+
+## Installation
+
+You can install the released version of numbertheory from seanliewcc on GitHub. 
+
+```{r}
+library(numbertheory)
+```
+
+
+## Example
+
+This is a basic example which shows you how to check if a pair of distinct positive integers are amicable:
+
+```{r example}
+amicable(220,284)
+```
